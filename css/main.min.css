@@ -223,15 +223,16 @@ ul {
   border: none;
   padding-bottom: 6px;
 }
+.header .ui-icon {
+  fill: rgba(0, 0, 0, 0.5294117647);
+}
 
-.description {
-  height: 60px;
-  overflow: auto;
+.card-style {
+  border: none;
 }
 
 .img-box {
-  width: 15rem;
-  height: 200px;
+  height: 310px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -240,6 +241,11 @@ ul {
 
 .card-img-top {
   width: 100px !important;
+  transition: all 0.2s ease-in-out !important;
+}
+
+.img-box:hover .card-img-top {
+  transform: scale(1.1) !important;
 }
 
 .card-title {
@@ -265,4 +271,5 @@ ul {
 .card-rate {
   display: flex;
   align-items: center;
+  gap: 5px;
 }/*# sourceMappingURL=main.min.css.map */

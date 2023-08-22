@@ -1,10 +1,8 @@
-.description {
-  height: 60px;
-  overflow: auto;
+.card-style {
+  border: none;
 }
 .img-box {
-  width: 15rem;
-  height: 200px;
+  height: 310px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -12,6 +10,12 @@
 }
 .card-img-top {
   width: 100px !important;
+  transition: all 0.2s ease-in-out !important;
+}
+.img-box:hover {
+  .card-img-top {
+    transform: scale(1.1) !important;
+  }
 }
 .card-title {
   font-size: 15px;
@@ -33,4 +37,5 @@
 .card-rate {
   display: flex;
   align-items: center;
+  gap: 5px;
 }

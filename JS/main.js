@@ -9,12 +9,14 @@ function renderFn(array, parent) {
 
   for (let i = 0; i < array.length; i++) {
     const newCard = document.createElement("div");
-    newCard.className = "card";
+    newCard.className = "card card-style";
     newCard.style.width = "15rem";
     newCard.style.width = "15rem";
 
     newCard.innerHTML = `
-      <div class="img-box"><img class="card-img-top" width="110"  src="${array[i].image}" alt=""></div>
+      <div class="img-box">
+         <img class="card-img-top" width="110"  src="${array[i].image}" alt="">
+      </div>
       <div class="card-body">
         <h5 class="card-title">${array[i].title}</h5>
         <div class="card-body-style">
