@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter&family=Roboto:wght@500;700&display=swap");
+
+.box-top-header {
+  background-color: #f4f5f5;
+  padding: 1.5px 0 1.5px;
+}
+.top-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  &__location {
+    display: flex;
+    align-items: center;
+    font-family: Inter;
+
+    font-size: 0.875rem;
+  }
+  &__region {
+    color: #141415;
+    margin: 4px;
+
+    font-family: Inter;
+
+    cursor: pointer;
+  }
+  &__city {
+    text-decoration: underline;
+    font-family: Inter;
+    cursor: pointer;
+    font-weight: 500 !important;
+  }
+  .dropdown-language{
+    padding: 0;
+  }
+  &__delivery-points {
+    margin-left: 24px;
+    color: #141415;
+  }
+  &__delivery {
+    font-size: 0.875rem;
+    color: #62656a;
+    font-family: Inter, sans-serif;
+  }
+  &__top-right {
+    display: flex;
+  }
+  &__top-links {
+    display: grid;
+    align-items: center;
+    grid-template-columns: repeat(3, auto);
+    grid-gap: 16px;
+
+    .question,
+    .my-orders {
+      color: #62656a;
+      font-family: Inter, sans-serif;
+      font-weight: 500;
+      font-size: 0.875rem;
+    }
+  }
+  .uzbek,
+  .russian {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 0 12px;
+  }
+}

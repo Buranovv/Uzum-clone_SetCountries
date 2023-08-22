@@ -1,0 +1,36 @@
+.description {
+  height: 60px;
+  overflow: auto;
+}
+.img-box {
+  width: 15rem;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #efefef;
+}
+.card-img-top {
+  width: 100px !important;
+}
+.card-title {
+  font-size: 15px;
+  font-family: Inter;
+  height: 50px;
+  overflow: hidden;
+}
+.dont {
+  background: #ffff00;
+  border-radius: 10px;
+  display: inline;
+  padding: 0 5px;
+}
+.card-body-style {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.card-rate {
+  display: flex;
+  align-items: center;
+}
