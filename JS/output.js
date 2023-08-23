@@ -11,6 +11,7 @@ let products = [
       rate: 3.9,
       count: 120,
     },
+    isFav: false,
   },
   {
     id: 2,
@@ -25,6 +26,7 @@ let products = [
       rate: 4.1,
       count: 259,
     },
+    isFav: false,
   },
   {
     id: 3,
@@ -38,6 +40,7 @@ let products = [
       rate: 4.7,
       count: 500,
     },
+    isFav: false,
   },
   {
     id: 4,
@@ -51,6 +54,7 @@ let products = [
       rate: 2.1,
       count: 430,
     },
+    isFav: false,
   },
   {
     id: 5,
@@ -65,6 +69,7 @@ let products = [
       rate: 4.6,
       count: 400,
     },
+    isFav: false,
   },
   {
     id: 6,
@@ -78,6 +83,7 @@ let products = [
       rate: 3.9,
       count: 70,
     },
+    isFav: false,
   },
   {
     id: 7,
@@ -91,6 +97,7 @@ let products = [
       rate: 3,
       count: 400,
     },
+    isFav: false,
   },
   {
     id: 8,
@@ -104,6 +111,7 @@ let products = [
       rate: 1.9,
       count: 100,
     },
+    isFav: false,
   },
   {
     id: 9,
@@ -117,6 +125,7 @@ let products = [
       rate: 3.3,
       count: 203,
     },
+    isFav: false,
   },
   {
     id: 10,
@@ -130,6 +139,7 @@ let products = [
       rate: 2.9,
       count: 470,
     },
+    isFav: false,
   },
   {
     id: 11,
@@ -144,6 +154,7 @@ let products = [
       rate: 4.8,
       count: 319,
     },
+    isFav: false,
   },
   {
     id: 12,
@@ -158,6 +169,7 @@ let products = [
       rate: 4.8,
       count: 400,
     },
+    isFav: false,
   },
   {
     id: 13,
@@ -171,6 +183,7 @@ let products = [
       rate: 2.9,
       count: 250,
     },
+    isFav: false,
   },
   {
     id: 14,
@@ -185,6 +198,7 @@ let products = [
       rate: 2.2,
       count: 140,
     },
+    isFav: false,
   },
   {
     id: 15,
@@ -198,6 +212,7 @@ let products = [
       rate: 2.6,
       count: 235,
     },
+    isFav: false,
   },
   {
     id: 16,
@@ -212,6 +227,7 @@ let products = [
       rate: 2.9,
       count: 340,
     },
+    isFav: false,
   },
   {
     id: 17,
@@ -225,6 +241,7 @@ let products = [
       rate: 3.8,
       count: 679,
     },
+    isFav: false,
   },
   {
     id: 18,
@@ -238,6 +255,7 @@ let products = [
       rate: 4.7,
       count: 130,
     },
+    isFav: false,
   },
   {
     id: 19,
@@ -251,6 +269,7 @@ let products = [
       rate: 4.5,
       count: 146,
     },
+    isFav: false,
   },
   {
     id: 20,
@@ -264,5 +283,6 @@ let products = [
       rate: 3.6,
       count: 145,
     },
+    isFav: false,
   },
 ];

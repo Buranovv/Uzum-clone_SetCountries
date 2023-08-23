@@ -37,3 +37,15 @@ elCloth.addEventListener("click", () => {
   });
   renderFn(cloth, elCards);
 });
+
+elCards.addEventListener("click", (evt) => {
+  if (evt.target.id === "ui-icon-f" || evt.target.id === "ui-icon") {
+    const id = Number(evt.target.dataset.id);
+    products.forEach((element) => {
+      if (element.id === id) {
+        element.isFav = !element.isFav;
+      }
+    });
+  }
+  renderFn(products, elCards);
+});

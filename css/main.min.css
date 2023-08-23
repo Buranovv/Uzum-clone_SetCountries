@@ -231,6 +231,10 @@ ul {
   border: none;
 }
 
+.card {
+  cursor: pointer;
+}
+
 .img-box {
   height: 310px;
   display: flex;
@@ -241,11 +245,11 @@ ul {
 
 .card-img-top {
   width: 100px !important;
-  transition: all 0.2s ease-in-out !important;
+  transition: all 0.3s ease-in-out !important;
 }
 
 .img-box:hover .card-img-top {
-  transform: scale(1.1) !important;
+  transform: scale(1.05) !important;
 }
 
 .card-title {
@@ -272,6 +276,20 @@ ul {
   display: flex;
   align-items: center;
   gap: 5px;
+}
+
+.ui-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.ui-icon-hover {
+  transition: all 0.3s ease-in;
+}
+
+.ui-icon:hover .ui-icon-hover {
+  fill: rgb(21, 21, 26);
 }
 
 .footer-title {
