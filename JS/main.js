@@ -3,7 +3,8 @@ const elForm = getElement("#form");
 const elSearch = getElement(".search");
 const elFilterOpen = getElement(".filter__title");
 const elFilterClose = getElement(".filter__close");
-const africa = getElement(".africa");
+const elFilterList = getElement(".filter__list");
+const africa = getElement(".afrika");
 const america = getElement(".america");
 const asia = getElement(".asia");
 const europe = getElement(".europe");
@@ -24,7 +25,9 @@ elForm.addEventListener("submit", (evt) => {
   const newArr = [];
 
   countries.forEach((element) => {
-    if (element.name.official.includes(elSearch.value)) {
+    if (
+      element.name.official.toLowerCase().includes(elSearch.value.toLowerCase())
+    ) {
       newArr.push(element);
     }
   });
@@ -44,3 +47,60 @@ elFilterClose.addEventListener("click", () => {
   elFilterClose.className = "filter__close";
 });
 
+africa.addEventListener("click", () => {
+  const africa = [];
+
+  countries.forEach((element) => {
+    if (element.continents == "Africa") {
+      africa.push(element);
+    }
+  });
+  renderFn(africa, elCards);
+});
+
+america.addEventListener("click", () => {
+  const america = [];
+
+  countries.forEach((element) => {
+    if (
+      element.continents == "North America" ||
+      element.continents == "South America"
+    ) {
+      america.push(element);
+    }
+  });
+  renderFn(america, elCards);
+});
+
+europe.addEventListener("click", () => {
+  const europe = [];
+
+  countries.forEach((element) => {
+    if (element.continents == "Europe") {
+      europe.push(element);
+    }
+  });
+  renderFn(europe, elCards);
+});
+
+ocean.addEventListener("click", () => {
+  const ocean = [];
+
+  countries.forEach((element) => {
+    if (element.continents == "Oceania") {
+      ocean.push(element);
+    }
+  });
+  renderFn(ocean, elCards);
+});
+
+asia.addEventListener("click", () => {
+  const asia = [];
+
+  countries.forEach((element) => {
+    if (element.continents == "Asia") {
+      asia.push(element);
+    }
+  });
+  renderFn(asia, elCards);
+});
