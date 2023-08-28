@@ -1,8 +1,110 @@
+@import "global";
+.card-style {
+  border-radius: 5px;
+  border: none;
+
+  background: #fff;
+  box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.03);
+}
+
 .card-img-top {
   width: 18rem;
   height: 160px;
-  
 }
-.img-box{
-    border-bottom: 1px solid black;
+.img-box {
+  box-shadow: 0px 0px 7px 2px rgba(0, 0, 0, 0.09);
+}
+.card p {
+  margin: 0 0 8px 0;
+}
+.card-title {
+  margin: 0 0 16px 0;
+}
+.card-body {
+  padding: 24px 24px;
+}
+.where {
+  width: 100%;
+  background: #fff;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.06);
+  position: fixed;
+  top: 0;
+  z-index: 999999;
+
+  overflow: hidden;
+  &__btn {
+    cursor: pointer;
+  }
+}
+.main {
+  background: #fafafa;
+  margin-top: 88px;
+  padding: 45px 0;
+}
+.search {
+  width: 480px;
+  height: 64px;
+  border: none;
+  border-radius: 5px;
+  padding: 18px 74px;
+
+  background: url("/search.svg") no-repeat 23px 23px;
+  background-color: #fff;
+  box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.05);
+}
+
+.filter {
+  &__title,
+  &__close {
+    width: 200px;
+    height: 56px;
+    border-radius: 5px;
+    margin: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 45px;
+
+    background: #fff;
+    box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.05);
+
+    cursor: pointer;
+  }
+  &__close {
+    display: none;
+  }
+  &__list {
+    width: 200px;
+    height: 164px;
+    border-radius: 5px;
+    padding: 0 !important;
+    margin-top: 10px !important;
+
+    position: absolute;
+    z-index: 2;
+    display: none;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+
+    background: #fff;
+    box-shadow: 0px 2px 9px 0px rgba(0, 0, 0, 0.05);
+  }
+  &__item {
+    padding: 4px 20px;
+    width: 100%;
+
+    cursor: pointer;
+  }
+  &__item:hover {
+    background-color: #f9f9f9;
+  }
+}
+
+.close {
+  display: none;
+}
+.show {
+  display: flex;
 }
