@@ -4,6 +4,8 @@ const elSearch = getElement(".search");
 const elFilterOpen = getElement(".filter__title");
 const elFilterClose = getElement(".filter__close");
 const elFilterList = getElement(".filter__list");
+const elTotal = getElement(".total");
+const all = getElement(".all");
 const africa = getElement(".afrika");
 const america = getElement(".america");
 const asia = getElement(".asia");
@@ -41,10 +43,19 @@ elFilterOpen.addEventListener("click", () => {
   elFilterOpen.className += " close";
 });
 
-elFilterClose.addEventListener("click", () => {
+function closeFilter() {
+  elFilterClose.addEventListener("click", () => {
+    elFilterOpen.className = "filter__title";
+    elFilterList.className = "filter__list";
+    elFilterClose.className = "filter__close";
+  });
+}
+
+all.addEventListener("click", () => {
   elFilterOpen.className = "filter__title";
   elFilterList.className = "filter__list";
   elFilterClose.className = "filter__close";
+  renderFn(countries, elCards);
 });
 
 africa.addEventListener("click", () => {
@@ -55,6 +66,9 @@ africa.addEventListener("click", () => {
       africa.push(element);
     }
   });
+  elFilterOpen.className = "filter__title";
+  elFilterList.className = "filter__list";
+  elFilterClose.className = "filter__close";
   renderFn(africa, elCards);
 });
 
@@ -69,6 +83,9 @@ america.addEventListener("click", () => {
       america.push(element);
     }
   });
+  elFilterOpen.className = "filter__title";
+  elFilterList.className = "filter__list";
+  elFilterClose.className = "filter__close";
   renderFn(america, elCards);
 });
 
@@ -80,6 +97,9 @@ europe.addEventListener("click", () => {
       europe.push(element);
     }
   });
+  elFilterOpen.className = "filter__title";
+  elFilterList.className = "filter__list";
+  elFilterClose.className = "filter__close";
   renderFn(europe, elCards);
 });
 
@@ -91,6 +111,9 @@ ocean.addEventListener("click", () => {
       ocean.push(element);
     }
   });
+  elFilterOpen.className = "filter__title";
+  elFilterList.className = "filter__list";
+  elFilterClose.className = "filter__close";
   renderFn(ocean, elCards);
 });
 
@@ -102,5 +125,8 @@ asia.addEventListener("click", () => {
       asia.push(element);
     }
   });
+  elFilterOpen.className = "filter__title";
+  elFilterList.className = "filter__list";
+  elFilterClose.className = "filter__close";
   renderFn(asia, elCards);
 });
