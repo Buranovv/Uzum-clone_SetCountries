@@ -49,8 +49,17 @@ li {
   z-index: 999999;
   overflow: hidden;
 }
-.where__btn {
+
+.where__dark,
+.where__light {
+  display: flex;
+  align-items: center;
+  gap: 10px;
   cursor: pointer;
+}
+
+.where__light {
+  display: none;
 }
 
 .main {
@@ -116,4 +125,18 @@ li {
 
 .show {
   display: flex;
+}
+
+.dark-mode body {
+  color: #fff;
+}
+.dark-mode .where,
+.dark-mode .card-style,
+.dark-mode .search,
+.dark-mode .filter__title,
+.dark-mode .filter__close {
+  background-color: #2b3844;
+}
+.dark-mode .main {
+  background-color: #202c36;
 }/*# sourceMappingURL=main.min.css.map */

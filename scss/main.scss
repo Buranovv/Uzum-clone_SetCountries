@@ -32,9 +32,17 @@
   z-index: 999999;
 
   overflow: hidden;
-  &__btn {
-    cursor: pointer;
-  }
+}
+.where__dark,
+.where__light {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  cursor: pointer;
+}
+.where__light {
+  display: none;
 }
 .main {
   background: #fafafa;
@@ -107,4 +115,20 @@
 }
 .show {
   display: flex;
+}
+
+.dark-mode {
+  body {
+    color: #fff;
+  }
+  .where,
+  .card-style,
+  .search,
+  .filter__title,
+  .filter__close {
+    background-color: #2b3844;
+  }
+  .main {
+    background-color: #202c36;
+  }
 }

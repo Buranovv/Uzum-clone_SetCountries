@@ -43,13 +43,11 @@ elFilterOpen.addEventListener("click", () => {
   elFilterOpen.className += " close";
 });
 
-function closeFilter() {
-  elFilterClose.addEventListener("click", () => {
-    elFilterOpen.className = "filter__title";
-    elFilterList.className = "filter__list";
-    elFilterClose.className = "filter__close";
-  });
-}
+elFilterClose.addEventListener("click", () => {
+  elFilterOpen.className = "filter__title";
+  elFilterList.className = "filter__list";
+  elFilterClose.className = "filter__close";
+});
 
 all.addEventListener("click", () => {
   elFilterOpen.className = "filter__title";
@@ -129,4 +127,12 @@ asia.addEventListener("click", () => {
   elFilterList.className = "filter__list";
   elFilterClose.className = "filter__close";
   renderFn(asia, elCards);
+});
+
+const modeDark = getElement("#where-dark");
+const modeLight = getElement("#where-light");
+
+modeDark.addEventListener("click", () => {
+  modeLight.className += " show";
+  modeDark.className += " close";
 });
