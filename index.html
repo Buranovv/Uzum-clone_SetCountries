@@ -14,6 +14,9 @@
     <link rel="stylesheet" href="/css/main.min.css" />
   </head>
   <body>
+    <div class="spinner-border spinner-js" role="status">
+      <span class="sr-only"></span>
+    </div>
     <div class="total">
       <section class="where">
         <div
@@ -71,48 +74,14 @@
               />
             </form>
             <div class="filter">
-              <p class="filter__title">
-                Filter by Region
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="12"
-                  height="12"
-                  viewBox="0 0 12 12"
-                  fill="none"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M9.45 3.45L6 6.9L2.55 3.45L1.5 4.5L6 9L10.5 4.5L9.45 3.45Z"
-                    fill="black"
-                  />
-                </svg>
-              </p>
-              <p class="filter__close">
-                Filter by Region
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="12"
-                  height="12"
-                  viewBox="0 0 12 12"
-                  fill="none"
-                >
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M9.45 3.45L6 6.9L2.55 3.45L1.5 4.5L6 9L10.5 4.5L9.45 3.45Z"
-                    fill="black"
-                  />
-                </svg>
-              </p>
-              <ul class="filter__list">
-                <li class="filter__item all">All countries</li>
-                <li class="filter__item afrika">Afrika</li>
-                <li class="filter__item america">America</li>
-                <li class="filter__item asia">Asia</li>
-                <li class="filter__item europe">Europe</li>
-                <li class="filter__item ocean">Ocean</li>
-              </ul>
+              <select class="filter__list">
+                <option class="filter__item" value="all">All countries</option>
+                <option class="filter__item" value="africa">Afrika</option>
+                <option class="filter__item" value="america">America</option>
+                <option class="filter__item" value="asia">Asia</option>
+                <option class="filter__item" value="europe">Europe</option>
+                <option class="filter__item" value="ocean">Ocean</option>
+              </select>
             </div>
           </header>
           <section
