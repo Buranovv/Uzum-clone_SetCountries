@@ -128,11 +128,3 @@ asia.addEventListener("click", () => {
   elFilterClose.className = "filter__close";
   renderFn(asia, elCards);
 });
-
-const modeDark = getElement("#where-dark");
-const modeLight = getElement("#where-light");
-
-modeDark.addEventListener("click", () => {
-  modeLight.className += " show";
-  modeDark.className += " close";
-});
