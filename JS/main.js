@@ -22,6 +22,7 @@ elForm.addEventListener("submit", (evt) => {
     .then((res) => {
       renderFn(res, elCards);
     });
+  elForm.reset();
 });
 
 elFilterList.addEventListener("change", (evt) => {
