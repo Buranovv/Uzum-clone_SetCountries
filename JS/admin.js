@@ -1,9 +1,9 @@
 import { getElement } from "./helpers.js";
 
 const elCards = getElement(".cards");
-const elElec = getElement("#electronics");
-const elJew = getElement("#jewelery");
-const elCloth = getElement("#clothing");
+// const elElec = getElement("#electronics");
+// const elJew = getElement("#jewelery");
+// const elCloth = getElement("#clothing");
 const elForm = getElement("#form");
 const elSearch = getElement("#search-input");
 const addCard = getElement("#add-card");
@@ -142,7 +142,7 @@ fetch(BASE_API + "product")
 
 elForm.addEventListener("submit", (evt) => {
   evt.preventDefault();
-  fetch(BASE_API + "/product")
+  fetch(BASE_API + "product")
     .then((res) => res.json())
     .then((res) => {
       const newArr = [];
@@ -172,12 +172,16 @@ addCard.addEventListener("submit", (evt) => {
   };
 
   fetch(BASE_API + "product", {
-    method: "Post",
+    method: "POST",
     body: newCard,
   })
     .then((res) => res.json())
     .then((res) => {
-      renderFn(res, elCards);
+      fetch(BASE_API + "product")
+        .then((res) => res.json())
+        .then((res) => {
+          renderFn(res, elCards);
+        });
     });
 
   addCard.reset();
@@ -186,7 +190,7 @@ addCard.addEventListener("submit", (evt) => {
 elCards.addEventListener("click", (evt) => {
   if (evt.target.id === "delete-btn") {
     fetch(BASE_API + `product/${evt.target.dataset.id}`, {
-      method: "Delete",
+      method: "DELETE",
     })
       .then((res) => res.json())
       .then((res) => {
@@ -236,48 +240,6 @@ elCards.addEventListener("click", (evt) => {
               alert(err);
             });
         });
-
-        // fetch(BASE_API + "product")
-        //   .then((res) => res.json())
-        //   .then((res) => {
-        //     editTit.value = res.title;
-        //     editImg.value = res.image;
-        //     editPrice.value = res.price;
-        //     editCategory.value = res.category;
-        //     editCreatedAt.value = res.createdAt;
-        //     prevImg.src = res.image;
-        //
-        //   });
       });
   }
 });
-
-// fetch(BASE_API + "product")
-// .then((res) => res.json())
-// .then((res) => {
-//   editTit.value = res.title;
-//   editImg.value = res.image;
-//   editPrice.value = res.price;
-//   editCategory.value = res.category;
-//   editCreatedAt.value = res.createdAt;
-//   prevImg.src = res.image;
-// });
-
-// saveChan.addEventListener("click", () => {
-//   const editCard = {
-//     title: editTit.value,
-//     image: editImg.value,
-//     price: editPrice.value,
-//     category: editCategory.value,
-//     createdAt: editCreatedAt.value,
-//   };
-
-//   fetch(BASE_API + `product/${evt.target.dataset.id}`, {
-//     method: "Put",
-//     body: editCard,
-//   })
-//     .then((res) => res.json())
-//     .then((res) => {
-//       renderFn(res, elCards);
-//     });
-// });

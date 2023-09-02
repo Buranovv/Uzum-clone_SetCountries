@@ -47,21 +47,21 @@ fetch(BASE_API + "product")
 //   renderFn(cloth, elCards);
 // });
 
-elCards.addEventListener("click", (evt) => {
-  fetch(BASE_API + "product")
-    .then((res) => res.json())
-    .then((res) => {
-      if (evt.target.id === "ui-icon-f" || evt.target.id === "ui-icon") {
-        const id = Number(evt.target.dataset.id);
-        res.forEach((element) => {
-          if (element.id === id) {
-            element.isFav = !element.isFav;
-          }
-        });
-      }
-      renderFn(res, elCards);
-    });
-});
+// elCards.addEventListener("click", (evt) => {
+//   fetch(BASE_API + "product")
+//     .then((res) => res.json())
+//     .then((res) => {
+//       if (evt.target.id === "ui-icon-f" || evt.target.id === "ui-icon") {
+//         const id = Number(evt.target.dataset.id);
+//         res.forEach((element) => {
+//           if (element.id === id) {
+//             element.isFav = !element.isFav;
+//           }
+//         });
+//       }
+//       renderFn(res, elCards);
+//     });
+// });
 
 elForm.addEventListener("submit", (evt) => {
   evt.preventDefault();
