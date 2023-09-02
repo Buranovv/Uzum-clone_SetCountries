@@ -15,6 +15,86 @@
   </head>
   <body>
     <main>
+      <div
+        class="modal fade"
+        id="exampleModal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">
+                Modal title
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <form
+                class="form form-control d-flex flex-column align-items-center gap-2 w-50 mx-auto my-0"
+                id="add-card"
+              >
+                <h3 class="title">Edit product</h3>
+                <img src="" width="200" id="prev-img" alt="" />
+                <input
+                  type="text"
+                  class="input form-control w-100"
+                  placeholder="title..."
+                  id="editTitle"
+                />
+                <input
+                  type="text"
+                  class="input form-control w-100"
+                  placeholder="image..."
+                  id="editImg"
+                />
+                <input
+                  type="text"
+                  class="input form-control w-100"
+                  id="editPrice"
+                  placeholder="price..."
+                />
+                <input
+                  type="text"
+                  class="input form-control w-100"
+                  placeholder="category..."
+                  id="editCategory"
+                />
+                <input
+                  type="text"
+                  class="input form-control w-100"
+                  disabled="disabled"
+                  id="editCreatedAt"
+                />
+              </form>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-dismiss="modal"
+                id="save-changes"
+              >
+                Save changes
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
       <div class="box-top-header">
         <div class="container">
           <div class="top-header">
