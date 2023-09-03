@@ -6,6 +6,8 @@ const elJew = getElement("#jewelery");
 const elCloth = getElement("#clothing");
 const elForm = getElement("#form");
 const elSearch = getElement("#search-input");
+const uz = getElement("#uz");
+const ru = getElement("#ru");
 const BASE_API = "https://64f17d800e1e60602d23d7d6.mockapi.io/";
 
 fetch(BASE_API + "product")
@@ -82,4 +84,5 @@ elForm.addEventListener("submit", (evt) => {
       renderFn(newArr, elCards);
     });
 });
+
 

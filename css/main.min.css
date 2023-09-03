@@ -90,12 +90,20 @@ ul {
   font-weight: 500;
   font-size: 0.875rem;
 }
-.top-header .uzbek,
-.top-header .russian {
+
+.dropdown-language {
+  position: relative;
+}
+.dropdown-language .uzbek,
+.dropdown-language .russian {
   display: flex;
   align-items: center;
   gap: 6px;
   padding: 0 12px;
+  cursor: pointer;
+}
+.dropdown-language .russian {
+  display: none;
 }
 
 .header__top {

@@ -30,7 +30,7 @@
     cursor: pointer;
     font-weight: 500 !important;
   }
-  .dropdown-language{
+  .dropdown-language {
     padding: 0;
   }
   &__delivery-points {
@@ -59,11 +59,20 @@
       font-size: 0.875rem;
     }
   }
+}
+
+.dropdown-language {
+  position: relative;
   .uzbek,
   .russian {
     display: flex;
     align-items: center;
     gap: 6px;
     padding: 0 12px;
+
+    cursor: pointer;
+  }
+  .russian {
+    display: none;
   }
 }
