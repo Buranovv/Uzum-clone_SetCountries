@@ -156,7 +156,9 @@ elForm.addEventListener("submit", (evt) => {
         renderFn(newArr, elCards);
       });
       elForm.reset();
-      renderFn(newArr, elCards);
+    })
+    .catch((err) => {
+      alert(err);
     });
 });
 
