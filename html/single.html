@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Admin</title>
+    <title>Single</title>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -11,137 +11,11 @@
       crossorigin="anonymous"
     />
 
-    <link rel="stylesheet" href="/css/main.min.css" />
+    <link rel="stylesheet" href="../css/main.min.css" />
+    <link rel="stylesheet" href="../css/single.min.css" />
   </head>
   <body>
-    <template id="template-product">
-      <div class="card card-style" style="width: 15rem">
-        <div class="img-box">
-          <img class="card-img-top" width="110" src="" alt="" />
-          <svg
-            width="20"
-            height="20"
-            viewBox="0 0 20 20"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            alt="like"
-            class="ui-icon"
-          >
-            <path
-              id="ui-icon-f"
-              data-id=""
-              d="M5.95 2C8.51792 2 10 4.15234 10 4.15234C10 4.15234 11.485 2 14.05 2C16.705 2 19 4.07 19 6.95C19 11.1805 12.5604 15.6197 10.3651 17.5603C10.1582 17.7432 9.84179 17.7432 9.63488 17.5603C7.44056 15.6209 1 11.1803 1 6.95C1 4.07 3.295 2 5.95 2Z"
-              fill="white"
-              fill-opacity="0.8"
-            ></path>
-            <path
-              id="ui-icon"
-              data-id=""
-              class="ui-icon-hover"
-              d="M1 6.86486C1 4.20297 3.15017 2 5.86486 2C7.98685 2 9.35921 3.35876 10 4.18673C10.6408 3.35876 12.0132 2 14.1351 2C16.8506 2 19 4.20302 19 6.86486C19 8.02987 18.5328 9.18622 17.8534 10.265C17.1716 11.3476 16.252 12.3903 15.29 13.3377C13.9567 14.6508 12.4757 15.8387 11.4134 16.6907C10.9618 17.0529 10.5859 17.3544 10.3293 17.579C10.1407 17.7439 9.85926 17.7439 9.67075 17.579C9.41405 17.3544 9.03815 17.0529 8.58659 16.6907C7.52431 15.8387 6.04326 14.6508 4.70997 13.3377C3.74802 12.3903 2.82836 11.3476 2.14659 10.265C1.46724 9.18622 1 8.02987 1 6.86486ZM5.86486 3C3.70929 3 2 4.74838 2 6.86486C2 7.76743 2.36553 8.73607 2.99277 9.73208C3.61759 10.7242 4.47833 11.706 5.41165 12.6252C6.71033 13.9042 8.08423 15.005 9.13396 15.8461C9.45728 16.1052 9.74985 16.3396 10 16.547C10.2501 16.3396 10.5427 16.1052 10.866 15.8461C11.9158 15.005 13.2897 13.9042 14.5883 12.6252C15.5217 11.706 16.3824 10.7242 17.0072 9.73208C17.6345 8.73607 18 7.76743 18 6.86486C18 4.74833 16.2914 3 14.1351 3C12.0406 3 10.8181 4.70211 10.5033 5.21028C10.2727 5.5825 9.72727 5.58249 9.4967 5.21027C9.1819 4.7021 7.95944 3 5.86486 3Z"
-              fill="#15151A60"
-            ></path>
-          </svg>
-        </div>
-        <div class="card-body">
-          <h5 class="card-title"></h5>
-          <div class="card-body-style">
-            <p class="card-createAt"></p>
-            <p class="dont">Bo'lib to'lash yo'q</p>
-            <p class="card-price">$</p>
-            <div
-              class="btn-box d-flex align-items-center justify-content-center gap-2"
-            >
-              <button class="btn btn-danger w-100" id="delete-btn">
-                Delete
-              </button>
-              <button data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-primary w-100" id="edit-btn">Edit</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </template>
-
     <main>
-      <div
-        class="modal fade"
-        id="exampleModal"
-        tabindex="-1"
-        aria-labelledby="exampleModalLabel"
-        aria-hidden="true"
-      >
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">
-                Modal title
-              </h1>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="modal"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="modal-body">
-              <form
-                class="form form-control d-flex flex-column align-items-center gap-2 w-50 mx-auto my-0"
-              >
-                <h3 class="title">Edit product</h3>
-                <img src="" width="200" id="prev-img" alt="" />
-                <input
-                  type="text"
-                  class="input form-control w-100"
-                  placeholder="title..."
-                  id="editTitle"
-                />
-                <input
-                  type="text"
-                  class="input form-control w-100"
-                  placeholder="image..."
-                  id="editImg"
-                />
-                <input
-                  type="text"
-                  class="input form-control w-100"
-                  id="editPrice"
-                  placeholder="price..."
-                />
-                <input
-                  type="text"
-                  class="input form-control w-100"
-                  placeholder="category..."
-                  id="editCategory"
-                />
-                <input
-                  type="text"
-                  class="input form-control w-100"
-                  disabled="disabled"
-                  id="editCreatedAt"
-                />
-              </form>
-            </div>
-            <div class="modal-footer">
-              <button
-                type="button"
-                class="btn btn-secondary"
-                data-bs-dismiss="modal"
-              >
-                Close
-              </button>
-              <button
-                type="button"
-                class="btn btn-primary"
-                data-bs-dismiss="modal"
-                id="save-changes"
-              >
-                Save changes
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-
       <div class="box-top-header">
         <div class="container">
           <div class="top-header">
@@ -223,7 +97,7 @@
                     </svg>
                     <span class="uz">O'zbekcha</span>
                   </li>
-                  <li class="russian" id="ru" style="display: none">
+                  <li class="russian" id="ru">
                     <svg
                       width="20"
                       height="20"
@@ -456,46 +330,19 @@
             </button>
           </div>
         </section>
-        <form
-          class="form form-control mt-5 d-flex flex-column align-items-center gap-2 w-50 mx-auto my-0"
-          id="add-card"
-        >
-          <h3 class="title">Add new product</h3>
-          <input
-            type="text"
-            class="input form-control w-100"
-            placeholder="title..."
-            id="newTitle"
-          />
-          <input
-            type="text"
-            class="input form-control w-100"
-            placeholder="image..."
-            id="newImg"
-          />
-          <input
-            type="text"
-            class="input form-control w-100"
-            id="newPrice"
-            placeholder="price..."
-          />
-          <input
-            type="text"
-            class="input form-control w-100"
-            placeholder="category..."
-            id="newCategory"
-          />
-          <input
-            type="text"
-            class="input form-control w-100"
-            disabled="disabled"
-            id="newCreatedAt"
-          />
-          <button class="btn btn-primary w-100">Add</button>
-        </form>
-        <section
-          class="cards d-flex flex-wrap justify-content-center mt-5 gap-5"
-        ></section>
+        <section class="cards d-flex justify-content-center align-items-center">
+          <div class="my-card d-flex align-items-start">
+            <img src="" alt="" id="card-img" width="300" height="300" />
+            <div class="card-body">
+              <h3 class="card__title mb-5"></h3>
+              <div class="card-body-style">
+                <p class="card-createAt w-50"></p>
+                <p class="dont d-inline-block">Bo'lib to'lash yo'q</p>
+                <p class="card-price"></p>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </main>
     <div class="container">
@@ -792,15 +639,6 @@
       </footer>
     </div>
 
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
-      crossorigin="anonymous"
-    ></script>
-    <script
-      type="text/javascript"
-      src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"
-    ></script>
-    <script type="module" src="/JS/admin.js"></script>
+    <script type="module" src="../JS/single.js"></script>
   </body>
 </html>

@@ -1,0 +1,9 @@
+.cards {
+  height: 100vh;
+}
+.cards .my-card {
+  gap: 150px;
+}
+.cards .card-body {
+  font-size: 30px;
+}/*# sourceMappingURL=single.min.css.map */
