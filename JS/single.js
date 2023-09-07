@@ -8,6 +8,7 @@ const title = getElement(".card__title");
 const img = getElement("#card-img");
 const create = getElement(".card-createAt");
 const price = getElement(".card-price");
+const elLogo = getElement(".logo");
 
 fetch(BASE_API + "product/" + id)
   .then((res) => res.json())
