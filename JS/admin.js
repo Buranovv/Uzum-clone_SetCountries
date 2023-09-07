@@ -77,29 +77,27 @@ fetch(BASE_API + "product")
 //     });
 // });
 
+elForm.addEventListener("submit", (evt) => {
+  evt.preventDefault();
+  fetch(BASE_API + "product")
+    .then((res) => res.json())
+    .then((res) => {
+      const newArr = [];
 
-  elForm.addEventListener("submit", (evt) => {
-    evt.preventDefault();
-    fetch(BASE_API + "product")
-      .then((res) => res.json())
-      .then((res) => {
-        const newArr = [];
-
-        res.forEach((element) => {
-          if (
-            element.title.toLowerCase().includes(elSearch.value.toLowerCase())
-          ) {
-            newArr.push(element);
-          }
-          renderFn(newArr, elCards, true);
-        });
-        elForm.reset();
-      })
-      .catch((err) => {
-        alert(err);
+      res.forEach((element) => {
+        if (
+          element.title.toLowerCase().includes(elSearch.value.toLowerCase())
+        ) {
+          newArr.push(element);
+        }
+        renderFn(newArr, elCards, true);
       });
-  });
-
+      elForm.reset();
+    })
+    .catch((err) => {
+      alert(err);
+    });
+});
 
 addCard.addEventListener("submit", (evt) => {
   evt.preventDefault();
