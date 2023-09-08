@@ -70,7 +70,7 @@ elForm.addEventListener("submit", (evt) => {
   fetch(BASE_API + "product")
     .then((res) => res.json())
     .then((res) => {
-      const newArr = [];
+      let newArr = [];
 
       res.forEach((element) => {
         if (
@@ -78,13 +78,11 @@ elForm.addEventListener("submit", (evt) => {
         ) {
           newArr.push(element);
         }
-        renderFn(newArr, elCards);
       });
+      renderFn(newArr, elCards);
       elForm.reset();
     })
     .catch((err) => {
       alert(err);
     });
 });
-
-
