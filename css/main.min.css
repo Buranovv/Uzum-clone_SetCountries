@@ -188,6 +188,7 @@ ul {
   font-family: Inter;
   font-size: 0.875rem;
   font-weight: 500 !important;
+  cursor: pointer;
 }
 .header__store-action-btns .regular:hover {
   border: none;
@@ -343,4 +344,16 @@ ul {
   font-size: 11px;
   font-weight: 400;
   line-height: 14px;
+}
+
+.linkAdmin {
+  display: block;
+  width: 125px;
+  padding: 10px;
+  margin: 0 auto;
+  margin-top: 15px;
+}
+
+#logout-div {
+  display: none;
 }/*# sourceMappingURL=main.min.css.map */

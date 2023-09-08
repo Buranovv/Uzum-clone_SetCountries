@@ -1,2 +1,13 @@
 @import "global";
 @import "home/home";
+.linkAdmin {
+  display: block;
+  width: 125px;
+  padding: 10px;
+  margin: 0 auto;
+  margin-top: 15px;
+}
+
+#logout-div {
+  display: none;
+}
