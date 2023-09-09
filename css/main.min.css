@@ -347,11 +347,15 @@ ul {
 }
 
 .linkAdmin {
-  display: block;
-  width: 125px;
+  width: 130px;
   padding: 10px;
   margin: 0 auto;
   margin-top: 15px;
+  border-radius: 5px;
+  font-weight: 500;
+  display: block;
+  color: #7000ff;
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
 }
 
 #logout-div {

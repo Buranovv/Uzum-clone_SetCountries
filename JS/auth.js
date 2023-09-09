@@ -25,11 +25,10 @@ if (isLogin) {
 logoutDiv.addEventListener("click", () => {
   localStorage.clear();
 
-  linkDiv.innerHtml = "";
   logoutDiv.style.display = "none";
   loginDiv.style.display = "flex";
-
-  window.location.reload();
+  linkDiv.textContent = null;
+  // window.location.reload();
 });
 
 submit.addEventListener("click", () => {
