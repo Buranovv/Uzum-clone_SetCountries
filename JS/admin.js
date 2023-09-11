@@ -1,4 +1,5 @@
 import { renderFn, getElement } from "./helpers.js";
+import { toUp } from "./main.js";
 import { BASE_API } from "./utils.js";
 
 const elCards = getElement(".cards");
@@ -22,12 +23,19 @@ $(document).ready(function () {
   );
 });
 
+const token = localStorage.getItem("token");
+
+if (!token) {
+  window.location.replace("../index.html");
+}
+
 fetch(BASE_API + "product")
   .then((res) => res.json())
   .then((res) => {
     renderFn(res, elCards, true);
   });
 
+toUp();
 // elElec.addEventListener("click", () => {
 //   const elec = [];
 

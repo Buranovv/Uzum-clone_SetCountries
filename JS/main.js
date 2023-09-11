@@ -7,6 +7,7 @@ const elJew = getElement("#jewelery");
 const elCloth = getElement("#clothing");
 const elForm = getElement("#form");
 const elSearch = getElement("#search-input");
+const toUpBtn = getElement("#to-up");
 const uz = getElement("#uz");
 const ru = getElement("#ru");
 
@@ -16,6 +17,16 @@ fetch(BASE_API + "product")
     renderFn(res, elCards);
   });
 
+// if (window.screenY(100)) {
+//   toUpBtn.style.display = "block";
+// }
+
+export function toUp() {
+  toUpBtn.addEventListener("click", () => {
+    window.scroll(0, 0);
+  });
+}
+toUp();
 // elElec.addEventListener("click", () => {
 //   const elec = [];
 

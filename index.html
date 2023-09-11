@@ -16,7 +16,7 @@
   <body>
     <template id="template-product">
       <a href="" id="link">
-        <div class="card card-style" style="width: 15rem">
+        <div class="card card-style" style="width: 14rem">
           <div class="img-box">
             <img class="card-img-top" width="110" src="" alt="" />
             <svg
@@ -152,8 +152,8 @@
                 <a href="#" class="my-orders" id="my-orders">Buyurtmalarim</a>
               </div>
               <div class="language-switcher">
-                <ul class="dropdown-language">
-                  <li class="uzbek" id="uz">
+                <select class="dropdown-language">
+                  <option class="uzbek" id="uz" selected>
                     <svg
                       width="20"
                       height="20"
@@ -194,8 +194,8 @@
                       </g>
                     </svg>
                     <span class="uz">O'zbekcha</span>
-                  </li>
-                  <li class="russian" id="ru">
+                  </option>
+                  <option class="russian" id="ru">
                     <svg
                       width="20"
                       height="20"
@@ -233,8 +233,8 @@
                         <rect y="7" width="20" height="7" fill="#3131C4"></rect>
                       </g></svg
                     ><span class="ru">Русский</span>
-                  </li>
-                </ul>
+                  </option>
+                </select>
               </div>
             </div>
           </div>
@@ -456,9 +456,19 @@
           </div>
         </section>
         <section
-          class="cards d-flex flex-wrap justify-content-center mt-5 gap-5"
+          class="cards d-flex flex-wrap justify-content-center mt-5"
+          style="gap: 30px"
         ></section>
       </div>
+      <!--  -->
+      <!--  -->
+      <!--  -->
+      <!--  -->
+      <div class="to-up-box">
+        <img id="to-up" class="to-up" src="/images/to-up-btn.svg" alt="" />
+      </div>
+      <!--  -->
+      <!--  -->
     </main>
     <div class="container">
       <footer>
