@@ -8,6 +8,7 @@ const elCloth = getElement("#clothing");
 const elForm = getElement("#form");
 const elSearch = getElement("#search-input");
 const toUpBtn = getElement("#to-up");
+const toUpBtnBox = getElement(".to-up-box");
 const uz = getElement("#uz");
 const ru = getElement("#ru");
 
@@ -16,14 +17,18 @@ fetch(BASE_API + "product")
   .then((res) => {
     renderFn(res, elCards);
   });
-
-// if (window.screenY(100)) {
-//   toUpBtn.style.display = "block";
-// }
+// debugger;
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 500) {
+    toUpBtnBox.style.display = "block";
+  } else {
+    toUpBtnBox.style.display = "none";
+  }
+});
 
 export function toUp() {
   toUpBtn.addEventListener("click", () => {
-    window.scroll(0, 0);
+    window.scrollTo(0, 0);
   });
 }
 toUp();

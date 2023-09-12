@@ -27,9 +27,10 @@ select {
   -webkit-appearance: none;
 }
 
+.to-up-box {
+  display: none;
+}
 .to-up {
-  // display: none;
-
   position: fixed;
   bottom: 4%;
   left: 95%;
