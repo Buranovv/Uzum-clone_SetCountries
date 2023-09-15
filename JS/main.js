@@ -22,7 +22,7 @@ window.addEventListener("scroll", () => {
   if (window.scrollY > 500) {
     toUpBtnBox.style.display = "block";
   } else {
-    toUpBtnBox.style.display = "none";
+    toUpBtnBox.style.bottom = "4%";
   }
 });
 
