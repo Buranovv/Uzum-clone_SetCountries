@@ -28,7 +28,6 @@ logoutDiv.addEventListener("click", () => {
   logoutDiv.style.display = "none";
   loginDiv.style.display = "flex";
   linkDiv.textContent = null;
-  // window.location.reload();
 });
 
 submit.addEventListener("click", () => {
